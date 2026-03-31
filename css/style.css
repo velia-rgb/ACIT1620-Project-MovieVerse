@@ -7,3 +7,223 @@ body {
 }
 
 /* Add your styles here */
+
+/* Layout for sections 2 and 3 */
+.horizontal-grid {
+    display: flex; /* Or display: grid; grid-template-columns: repeat(3, 1fr); */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Make sure cards don't get too wide */
+.movie-card {
+    flex: 1; 
+    max-width: 350px;
+}
+
+/* --- Global Reset & Theme --- */
+:root {
+    --primary-color: #e50914; /* Cinema Red */
+    --accent-color: #f5c518;  /* Gold Ratings */
+    --bg-dark: #111;
+    --card-bg: #1a1a1a;
+    --text-light: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents accidental side-scrolling */
+}
+
+/* --- Header & Navigation --- */
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Section 1: Hero Banner --- */
+#hero-banner {
+    height: 60vh; /* Adjust height to fit screen better */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.banner-content {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-left: 5px solid var(--primary-color);
+}
+
+/* --- Responsive Grid System --- */
+.movie-grid-section {
+    padding: 40px 5%;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+.horizontal-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Forces them on one line for desktop */
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* --- Movie Cards --- */
+
+a {
+    text-decoration: none; /* Removes underlines */
+    color: inherit;        /* Keeps your white text color */
+    display: block;        /* Ensures the link fills the whole space */
+}
+
+.movie-card {
+    background: var(--card-bg);
+    flex: 1; /* Makes cards grow equally to fill the screen width */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    aspect-ratio: 2/3; /* Keeps movie posters consistent */
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
+}
+
+/* --- Section 4: CTA --- */
+#cta-reviews {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* --- Footer --- */
+#main-footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+}
+
+.social-links a {
+    color: var(--accent-color);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .horizontal-grid {
+        flex-wrap: wrap; /* Cards move down to next line */
+    }
+
+    .movie-card {
+        flex: 1 1 100%; /* Each card takes full width on phone */
+    }
+
+    #hero-banner {
+        height: 40vh;
+    }
+
+    .banner-content {
+        padding: 1rem;
+    }
+}
+
+/* --- Section 1: Hero Banner (UPDATED for Hover Effects) --- */
+#hero-banner {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;s
+    overflow: hidden; /* Important: keeps the image inside the banner container when it scales up */
+    transition: transform 0.5s ease, background-image 0.5s ease; /* Adds smooth transition for both size and background */
+    
+    /* Default State: Lighter overlay (more transparent) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2094&auto=format&fit=crop');
+}
+
+/* Hover State: The entire banner get bigger and darker */
+#hero-banner:hover {
+    transform: scale(1.05); /* Gets slightly bigger (5%) */
+    
+    /* Darker overlay on hover (less transparent) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2094&auto=format&fit=crop');
+}
+
+/* Ensures the text content doesn't scale with the background, keeping it readable */
+.banner-content {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-left: 5px solid var(--primary-color);
+    position: relative;
+    z-index: 10; /* Keeps text above the scaling background */
+    transition: transform 0.5s ease; /* Matches banner transition */
+}
+
+/* Slightly reverse scale the content so the text doesn't look like it's growing */
+#hero-banner:hover .banner-content {
+    transform: scale(0.98); /* Slightly shrinks content to counter banner growth */
+}
