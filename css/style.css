@@ -31,7 +31,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
-}
+} 
 
 
 /* NAV */
@@ -303,4 +303,3 @@ footer {
 footer span {
   color: var(--accent);
 }
-
