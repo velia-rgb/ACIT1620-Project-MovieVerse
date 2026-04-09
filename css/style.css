@@ -6,6 +6,11 @@ body {
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
+
+  background-image: url('../images/360_F_97469997_cCBTDOhgDEYskQUdoi4W7hWUoeeM7BwZ.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Add your styles here */
@@ -27,13 +32,22 @@ body {
   padding: 0;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 15, 0.85); 
+    z-index: 0;
+}
+
+
 #main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.4rem 3rem;
   border-bottom: 1px solid var(--border);
-  background: rgba(10,10,15,0.85);
+  background: rgba(18, 12, 12, 0.71);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
@@ -58,8 +72,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.4rem 3rem;
-  border-bottom: 1px solid var(--border);
-  background: rgba(10,10,15,0.85);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
@@ -277,20 +292,6 @@ nav ul a.active {
   gap: 8px;
 }
 
-.reviewer-avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--accent-dim);
-  border: 1px solid rgba(232,184,75,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--accent);
-  flex-shrink: 0;
-}
 
 .reviewer-info {
   display: flex;
