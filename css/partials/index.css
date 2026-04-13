@@ -10,7 +10,7 @@
     --transition: all 0.3s ease; /* Transition effect */
 }
 
-body {
+.index {
     
     margin: 0;
     padding: 0;
@@ -57,23 +57,23 @@ p { font-size: 1rem; }
     background-color: var(--accent-color);
 }
 
-.nav-links {
+/* .nav-links {
     display: flex;
     list-style: none;
     gap: 20px;
     font-size: x-large;
     font-weight: 700;
     color: var(--text-light);
-}
+} */
 
-.nav-links a {
+/* .nav-links a {
     text-decoration: none;
     color: var(--secondary-color);
 }
 
 .nav-links a:hover {
     color: var(--primary-color);   
-}
+} */
 
 /* --- Section 1: Hero Banner --- */
 
@@ -155,7 +155,7 @@ p { font-size: 1rem; }
     padding: 20px 0;
 }
 
-.movie-card {
+.movie-card1 {
     background: var(--card-bg);
     flex: 1; /* Makes cards grow equally to fill the screen width */
     border-radius: 10px;
@@ -166,7 +166,7 @@ p { font-size: 1rem; }
     max-width: 30%;
 }
 
-.movie-card img {
+.movie-card1 img {
     width: 100%;
     height: auto; /* Maintains aspect ratio */
     aspect-ratio: 2/3; /* Keeps movie posters consistent */
@@ -177,7 +177,7 @@ p { font-size: 1rem; }
     padding: 15px;
 }
 
-.movie-card:hover {
+.movie-card1:hover {
     transform: translateY(-50px);
     transform: scale(1.2);
     box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
