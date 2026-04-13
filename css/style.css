@@ -1,9 +1,2 @@
-/* MovieVerse Project - Starter Styles */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Add your styles here */
+@import url("partials/reviews.css");
+@import url("partials/actors.css");
