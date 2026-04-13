@@ -1,13 +1,21 @@
 /* MovieVerse Project - Starter Styles */
 
+html {
+    min-height: 100%;
+    background: var(--bg);
+}
+
 .reviews {
-  background: var(--bg);
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: var(--bg);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
 
-  background-image: url('/images/360_F_97469997_cCBTDOhgDEYskQUdoi4W7hWUoeeM7BwZ.jpg');
+  background-image: url('/images/photo-1489599849927-2ee91cede3ba.avif');
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -36,9 +44,9 @@
     content: '';
     position: fixed;
     inset: 0;
-    background: rgba(10, 10, 15, 0.85); 
     z-index: 0;
 }
+
 
 
 #main-header {
@@ -549,15 +557,57 @@ nav ul a:hover, nav ul a.active {
         .delay-8 { animation-delay: 2.4s; }
 
 /* FOOTER */
-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
+#main-footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
 }
 
-footer span {
-  color: var(--accent);
+.social-links a {
+    color: var(--accent-color);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+/*Mobile Scaling*/
+
+@media (max-width: 768px) {
+    .grid-review {
+        grid-template-columns: 1fr;
+    }
+
+    .wrap {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .wrap .overlay {
+        transform: none !important;
+    }
+
+    .wrap:hover .overlay {
+        transform: none;
+    }
+
+    .image-content {
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+
+    .wrap:hover .image-content {
+        width: 100%;
+    }
+
+    .overlay-content {
+        display: none;
+    }
+
+    .text {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
 }

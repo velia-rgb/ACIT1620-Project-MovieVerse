@@ -10,6 +10,7 @@
     --transition: all 0.3s ease; /* Transition effect */
 }
 
+
 .index {
     
     margin: 0;
@@ -232,5 +233,8 @@ p { font-size: 1rem; }
 
     .banner-content {
         padding: 1rem;
+    }
+    .main-header{
+        flex: 1 1 100%
     }
 }
