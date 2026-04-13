@@ -1,0 +1,236 @@
+:root {
+    /* Primary Colors - Cinema-inspired */
+    --primary-color: #e50914; /* Netflix red */
+    --secondary-color: #221f1f; /* Deep black */
+    --accent-color: #cfa158; /* Gold for highlights */
+    --light-bg: #2c2a2a; /* Dark background */
+    --text-light: #ffffff;
+    --text-muted: #b3b3b3;
+    --card-bg: #2a2a2a; /* Card background color */
+    --transition: all 0.3s ease; /* Transition effect */
+}
+
+.index {
+    
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    color: var(--text-light);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --- Header & Navigation --- */
+
+h1, h2, h3 {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p { font-size: 1rem; }
+
+.section-heading {
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--accent-color);
+}
+
+/* .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: x-large;
+    font-weight: 700;
+    color: var(--text-light);
+} */
+
+/* .nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);   
+} */
+
+/* --- Section 1: Hero Banner --- */
+
+#hero-banner {
+    height: 60vh; /* Adjust height to fit screen better */
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    overflow: hidden;
+
+    /* Start with the first image */
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+    
+    /* Animation settings */
+    animation: slideshow 10s infinite ease-in-out;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    
+}
+
+@keyframes slideshow {
+    0%, 10% { background-image: url("../../images/image2.webp"); }
+    20%, 30% { background-image: url("../../images/image1.png"); }
+    40%, 50% { background-image: url("../../images/image3.webp"); }
+    53%, 60% { background-image: url("../../images/mario.png"); }
+    66%, 70% { background-image: url("../../images/image4.jpg"); }
+    70%, 75% { background-image: url("../../images/toystory.jpeg"); }
+    75%, 80% { background-image: url("../../images/image3.webp"); }
+    80%, 90% { background-image: url("../../images/image1.png"); }
+    100% { background-image: url("../../images/image5.jpg")}
+}
+
+#hero-banner:hover {
+    animation-play-state: paused; /* Stops the slideshow */
+    transform: scale(1.02);       /* Slight zoom effect */
+    filter: brightness(1.1);      /* Makes it look "bright/light" */
+}
+
+.front-banner {
+
+    align-items: center;
+
+}
+
+.front-banner:hover {
+
+    transform: scale(1.50);
+    padding-left: 40px;
+    
+}
+.banner-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-left: 5px solid var(--primary-color);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+
+/* Layout for sections 2 and 3 */
+
+.horizontal-grid {
+    display: flex; /* Or display: grid; grid-template-columns: repeat(3, 1fr); */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.movie-card1 {
+    background: var(--card-bg);
+    flex: 1; /* Makes cards grow equally to fill the screen width */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+}
+
+.movie-card1 img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    aspect-ratio: 2/3; /* Keeps movie posters consistent */
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.movie-card1:hover {
+    transform: translateY(-50px);
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
+}
+
+
+/* --- Section 4: CTA --- */
+
+#cta-reviews {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* --- Footer --- */
+
+#main-footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+}
+
+.social-links a {
+    color: var(--accent-color);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .horizontal-grid {
+        flex-wrap: wrap; /* Cards move down to next line */
+    }
+
+    .movie-card {
+        flex: 1 1 100%; /* Each card takes full width on phone */
+    }
+
+    #hero-banner {
+        height: 40vh;
+    }
+
+    .banner-content {
+        padding: 1rem;
+    }
+}

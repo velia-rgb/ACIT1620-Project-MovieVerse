@@ -1,2 +1,6 @@
-@import url("partials/reviews.css");
+
+@import url("partials/index.css");
+@import url("partials/reviews.css")
+
+
 @import url("partials/actors.css");
