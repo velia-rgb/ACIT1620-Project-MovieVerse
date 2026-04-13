@@ -1,13 +1,13 @@
 /* MovieVerse Project - Starter Styles */
 
-.reviews {
+body {
   background: var(--bg);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
 
-  background-image: url('/images/360_F_97469997_cCBTDOhgDEYskQUdoi4W7hWUoeeM7BwZ.jpg');
+  background-image: url('../images/360_F_97469997_cCBTDOhgDEYskQUdoi4W7hWUoeeM7BwZ.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -32,7 +32,7 @@
   padding: 0;
 }
 
-.reviews::before {
+body::before {
     content: '';
     position: fixed;
     inset: 0;
@@ -109,7 +109,8 @@ nav ul a {
   transition: color 0.2s;
 }
 
-nav ul a:hover {
+nav ul a:hover,
+nav ul a.active {
   color: var(--accent);
 }
 
