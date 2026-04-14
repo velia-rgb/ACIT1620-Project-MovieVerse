@@ -4,30 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieVerse | Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- Navigation -->
+<body class="contact">
+
     <header id="main-header">
         <div class="logo">
-            <a href="index.html">
-                <h1>Movie<span>Verse</span></h1>
-            </a>
+            <h1>Movie<span>Verse</span></h1>
         </div>
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Main navigation">
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="actors_page.html">Actors</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <header class="page-header">
+        <h1>Contact Us</h1>
+        <p>Have a review to submit? We'd love to hear from you.</p>
+    </header>
 
-     <!-- Footer -->
-     <footer id="main-footer">
+    <main>
+        <div class="contact-wrapper">
+
+            <aside class="contact-info" aria-label="Contact information">
+
+                <div class="contact-info-block">
+                    <div class="info-block-icon" aria-hidden="true">🎬</div>
+                    <p class="info-block-title">About MovieVerse</p>
+                    <p class="info-block-text">
+                        MovieVerse is a student-run film review platform built as part of BCIT's ACIT 1620 course.
+                        We publish honest reviews from real movie lovers.
+                    </p>
+                </div>
+
+                <div class="contact-info-block">
+                    <div class="info-block-icon" aria-hidden="true">✉️</div>
+                    <p class="info-block-title">Email Us</p>
+                    <p class="info-block-text">
+                        Want to collaborate or send a press screener?<br>
+                        <a href="mailto:hello@movieverse.bcit" style="color: var(--accent); text-decoration: none;">hello@movieverse.bcit</a>
+                    </p>
+                </div>
+
+                <div class="contact-info-block">
+                    <div class="info-block-icon" aria-hidden="true">📲</div>
+                    <p class="info-block-title">Follow Us</p>
+                    <p class="info-block-text">Stay up to date with our latest reviews.</p>
+                    <div class="social-row">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill" aria-label="Follow MovieVerse on Instagram">Instagram</a>
+                        <a href="https://youtube.com"   target="_blank" rel="noopener" class="social-pill" aria-label="Follow MovieVerse on YouTube">YouTube</a>
+                        <a href="https://facebook.com"  target="_blank" rel="noopener" class="social-pill" aria-label="Follow MovieVerse on Facebook">Facebook</a>
+                        <a href="https://x.com"         target="_blank" rel="noopener" class="social-pill" aria-label="Follow MovieVerse on X (Twitter)">X / Twitter</a>
+                    </div>
+                </div>
+
+            </aside>
+
+            <section class="contact-form-card" aria-labelledby="form-heading">
+
+                <h2 class="form-title" id="form-heading">Submit a Review</h2>
+                <p class="form-subtitle">Fill in the fields below and we'll get back to you within 48 hours.</p>
+
+                <form action="#" method="post" novalidate>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="first-name">First Name <span class="required" aria-hidden="true">*</span></label>
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                                placeholder="e.g. Jane"
+                                autocomplete="given-name"
+                                required
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name <span class="required" aria-hidden="true">*</span></label>
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                                placeholder="e.g. Doe"
+                                autocomplete="family-name"
+                                required
+                                aria-required="true"
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movie-title">Movie Title <span class="required" aria-hidden="true">*</span></label>
+                        <input
+                            type="text"
+                            id="movie-title"
+                            name="movie-title"
+                            placeholder="e.g. Project Hail Mary"
+                            required
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <select id="genre" name="genre" aria-label="Select movie genre">
+                            <option value="" disabled selected>Select a genre…</option>
+                            <option value="action">Action</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="drama">Drama</option>
+                            <option value="horror">Horror</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="romance">Romance</option>
+                            <option value="thriller">Thriller</option>
+                            <option value="family">Family / Animation</option>
+                            <option value="documentary">Documentary</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="star-rating-group">
+                        <label>Your Rating <span class="required" aria-hidden="true">*</span></label>
+                        <div class="star-rating" role="radiogroup" aria-label="Rate from 1 to 5 stars">
+
+                            <input type="radio" id="star5" name="rating" value="5" aria-label="5 stars">
+                            <label for="star5" title="5 stars" aria-hidden="true">★</label>
+
+                            <input type="radio" id="star4" name="rating" value="4" aria-label="4 stars">
+                            <label for="star4" title="4 stars" aria-hidden="true">★</label>
+
+                            <input type="radio" id="star3" name="rating" value="3" aria-label="3 stars">
+                            <label for="star3" title="3 stars" aria-hidden="true">★</label>
+
+                            <input type="radio" id="star2" name="rating" value="2" aria-label="2 stars">
+                            <label for="star2" title="2 stars" aria-hidden="true">★</label>
+
+                            <input type="radio" id="star1" name="rating" value="1" aria-label="1 star">
+                            <label for="star1" title="1 star" aria-hidden="true">★</label>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review">Your Review <span class="required" aria-hidden="true">*</span></label>
+                        <textarea
+                            id="review"
+                            name="review"
+                            placeholder="Tell us what you thought — the story, the performances, the visuals…"
+                            required
+                            aria-required="true"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Review</button>
+
+                </form>
+
+            </section>
+
+        </div>
+    </main>
+
+      <footer id="main-footer">
         <div class="social-links">
             <a href="https://facebook.com" target="_blank">Facebook</a>
             <a href="https://instagram.com" target="_blank">Instagram</a>
@@ -35,5 +196,6 @@
         </div>
         <p class="copyright">&copy; 2026 MovieVerse. All rights reserved.</p>
     </footer>
+    
 </body>
 </html>
