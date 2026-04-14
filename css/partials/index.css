@@ -64,6 +64,12 @@ p { font-size: 1rem; }
     background-color: var(--accent-color);
 }
 
+header a {
+    text-decoration: none;
+    font-size: large;
+
+}
+
 /* .nav-links {
     display: flex;
     list-style: none;
