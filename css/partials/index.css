@@ -1,15 +1,14 @@
 :root {
-    /* Primary Colors - Cinema-inspired */
-    --primary-color: #e50914; /* Netflix red */
-    --secondary-color: #221f1f; /* Deep black */
-    --accent-color: #cfa158; /* Gold for highlights */
-    --light-bg: #2c2a2a; /* Dark background */
+    
+    --primary-color: #e50914; 
+    --secondary-color: #221f1f; 
+    --accent-color: #cfa158; 
+    --light-bg: #2c2a2a; 
     --text-light: #ffffff;
     --text-muted: #b3b3b3;
-    --card-bg: #2a2a2a; /* Card background color */
-    --transition: all 0.3s ease; /* Transition effect */
+    --card-bg: #2a2a2a; 
+    --transition: all 0.3s ease; 
 }
-
 
 .index {
     margin: 0;
@@ -69,41 +68,16 @@ header a {
 
 }
 
-/* .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    font-size: x-large;
-    font-weight: 700;
-    color: var(--text-light);
-} */
-
-/* .nav-links a {
-    text-decoration: none;
-    color: var(--secondary-color);
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);   
-} */
-
-/* --- Section 1: Hero Banner --- */
 
 #hero-banner {
-    height: 60vh; /* Adjust height to fit screen better */
+    height: 60vh; 
     display: flex;
     align-items: center;
     padding: 0 5%;
     position: relative;
     overflow: hidden;
-
-    /* Start with the first image */
     background-size: cover;
     background-position: center;
-    /* background-attachment: fixed; */
-    /* background-repeat: no-repeat; */
-    
-    /* Animation settings */
     animation: slideshow 10s infinite ease-in-out;
     transition: transform 0.5s ease, filter 0.3s ease;
     
@@ -122,8 +96,8 @@ header a {
 }
 
 #hero-banner:hover {
-   transform: scale(1.02);       /* Slight zoom effect */
-    filter: brightness(1.1);      /* Makes it look "bright/light" */
+   transform: scale(1.02);      
+    filter: brightness(1.1);     
 }
 
 .front-banner {
@@ -157,11 +131,8 @@ header a {
     text-transform: uppercase;
 }
 
-
-/* Layout for sections 2 and 3 */
-
 .horizontal-grid {
-    display: flex; /* Or display: grid; grid-template-columns: repeat(3, 1fr); */
+    display: flex;
     gap: 20px;
     justify-content: center;
     padding: 20px 0;
@@ -169,7 +140,7 @@ header a {
 
 .movie-card1 {
     background: var(--card-bg);
-    flex: 1; /* Makes cards grow equally to fill the screen width */
+    flex: 1; 
     border-radius: 10px;
     overflow: hidden;
     transition: var(--transition);
@@ -180,8 +151,8 @@ header a {
 
 .movie-card1 img {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    aspect-ratio: 2/3; /* Keeps movie posters consistent */
+    height: auto; 
+    aspect-ratio: 2/3; 
     object-fit: cover;
 }
 
@@ -194,9 +165,6 @@ header a {
     transform: scale(1.2);
     box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
 }
-
-
-/* --- Section 4: CTA --- */
 
 #cta-reviews {
     text-align: center;
@@ -228,24 +196,115 @@ header a {
     text-decoration: none;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
+
+     #main-header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+     .logo h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px; 
+        padding: 0;
+    }
+
+    .nav-links li a {
+        font-size: 0.9rem; 
+    }
+    
     .horizontal-grid {
-        flex-wrap: wrap; /* Cards move down to next line */
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        gap: 20px;            
     }
-
-    .movie-card {
-        flex: 1 1 100%; /* Each card takes full width on phone */
-    }
-
+    
     #hero-banner {
-        height: 40vh;
+      
+        height: auto; 
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
+
+    .front-banner {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner-image {
+        width: 100%;
+        height: auto; 
+        max-height: 50vh; 
+        display: block; 
+        object-fit: cover;
+    }
+
 
     .banner-content {
-        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 15px; 
+        text-align: center;
+        border-left: 2px solid #ed1c24;
+        width: 100%; 
+        box-sizing: border-box; 
     }
-    .main-header{
-        flex: 1 1 100%
+
+    .movie-title {
+        font-size: 1.3rem; 
+        margin-bottom: 5px;
+        margin-top: 10px;
+        display: block;
+    }
+
+    .release-info {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .genre-tag {
+        position: static;
+        display: inline-block;
+        background-color: #d6a23b;
+        font-size: 0.65rem; 
+        margin: 0 auto 10px auto; 
+        border-radius: 4px; 
+        transform: none;
+       top: auto;
+       left: auto;
+    }
+
+    .movie-desc {
+        font-size: 0.85rem;
+        line-height: 1.1;
+        margin: 10px 0;
+    }
+
+   
+    .horizontal-grid {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 25px;
+        padding: 20px; 
+    }
+
+    .movie-card1 {
+        width: 90%; 
+        max-width: 450px; 
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 }
