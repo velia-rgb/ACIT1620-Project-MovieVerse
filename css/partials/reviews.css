@@ -40,7 +40,7 @@ html {
   padding: 0;
 }
 
-body::before {
+.reviews::before {
     content: '';
     position: fixed;
     inset: 0;
