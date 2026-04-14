@@ -21,6 +21,12 @@
     color: var(--text-light);
     background-color: var(--light-bg);
     line-height: 1.6;
+
+    background-image: url('/images/photo-1489599849927-2ee91cede3ba.avif');
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 
@@ -102,7 +108,7 @@ p { font-size: 1rem; }
     0%, 10% { background-image: url("../../images/image2.webp"); }
     20%, 30% { background-image: url("../../images/image1.png"); }
     40%, 50% { background-image: url("../../images/image3.webp"); }
-    53%, 60% { background-image: url("../../images/mario.png"); }
+    53%, 60% { background-image: url("../../images/image1.png"); }
     66%, 70% { background-image: url("../../images/image4.jpg"); }
     70%, 75% { background-image: url("../../images/toystory.jpeg"); }
     75%, 80% { background-image: url("../../images/image3.webp"); }
@@ -111,8 +117,7 @@ p { font-size: 1rem; }
 }
 
 #hero-banner:hover {
-    animation-play-state: paused; /* Stops the slideshow */
-    transform: scale(1.02);       /* Slight zoom effect */
+   transform: scale(1.02);       /* Slight zoom effect */
     filter: brightness(1.1);      /* Makes it look "bright/light" */
 }
 
@@ -124,8 +129,9 @@ p { font-size: 1rem; }
 
 .front-banner:hover {
 
-    transform: scale(1.50);
+    transform: scale(1.10);
     padding-left: 40px;
+    align-items: center;
     
 }
 .banner-content {
@@ -164,7 +170,7 @@ p { font-size: 1rem; }
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    max-width: 30%;
+    max-width: 25%;
 }
 
 .movie-card1 img {
