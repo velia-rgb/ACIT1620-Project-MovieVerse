@@ -3,6 +3,46 @@
    ========================================= */
 
 /* Header Section */
+
+.scream-poster {
+    background-image: url('/images/ENTER-MOVIE-SCREAM-7-CAMPBELL-GET.webp');
+}
+
+.pratt-poster {
+    background-image: url('/images/chris-pratt-arrives-at-the-world-premiere-of-netflixs-the-news-photo-1755612879.avif');
+}
+
+.JonHamm-poster {
+    background-image: url('/images/People-Hasty_Pudding_79494.avif');
+}
+
+.zendaya-poster {
+    background-image: url('/images/Zendaya-1.webp');
+}
+
+.samara-poster {
+    background-image: url('/images/Samara-Weaving-032526-818d6f60d1554814b6a6407bc32fe2e6.webp');
+}
+
+.gosling-poster {
+    background-image: url('/images/ryan-gosling-gq-magazine-01.webp');
+}
+
+
+
+.actors {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background-image: url('/images/photo-1489599849927-2ee91cede3ba.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .actors-header {
     text-align: center;
     padding: 40px 20px 20px;
@@ -97,3 +137,6 @@
     margin: 6rem auto 4rem;
     padding: 0 2rem;
 }
+
+
+
