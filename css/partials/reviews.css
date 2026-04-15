@@ -6,7 +6,7 @@
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
-  background-image: url('/images/photo-1489599849927-2ee91cede3ba.avif');
+  background-image: url('../../images/photo-1489599849927-2ee91cede3ba.avif');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -156,39 +156,39 @@ a:has(.image-content) {
 }
 
 .img-mario {
-  background-image: url('/images/super_mario_galaxy_movie_ver12.webp');
+  background-image: url('../../images/super_mario_galaxy_movie_ver12.webp');
 }
 
 .img-they-will-kill-you {
-  background-image: url('/images/they-will-kill-you_ln3v2r93.webp');
+  background-image: url('../../images/they-will-kill-you_ln3v2r93.webp');
 }
 
 .img-project-hail-mary {
-  background-image: url('/images/hailmary.webp');
+  background-image: url('../../images/hailmary.webp');
 }
 
 .img-ready-or-not-2 {
-  background-image: url('/images/ready-or-not-2.webp');
+  background-image: url('../../images/ready-or-not-2.webp');
 }
 
 .img-the-drama { 
-  background-image: url("/images/drama.webp"); 
+  background-image: url("../../images/drama.webp"); 
 }
 
 .img-hoppers {
-  background-image: url('/images/hoppers_qkxfn9n4.webp'); 
+  background-image: url('../../images/hoppers_qkxfn9n4.webp'); 
 }
 
 .img-scream { 
-  background-image: url('/images/scan_f972e815-e4c3-4468-8f12-566e4ef0cd8c.webp');
+  background-image: url('../../images/scan_f972e815-e4c3-4468-8f12-566e4ef0cd8c.webp');
 }
 
 .img-send-help {
-  background-image: url('/images/send-help_6skoyetj.webp'); 
+  background-image: url('../../images/send-help_6skoyetj.webp'); 
 }
 
 .img-good-luck { 
-  background-image: url('/images/good-luck-have-fun-dont-die_shqy9la3.webp'); 
+  background-image: url('../../images/good-luck-have-fun-dont-die_shqy9la3.webp'); 
 }
 
 
