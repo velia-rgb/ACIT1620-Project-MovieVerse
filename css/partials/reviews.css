@@ -5,11 +5,8 @@
   background-color: var(--bg);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
-  min-height: 100vh;
   overflow-x: hidden;
-
   background-image: url('/images/photo-1489599849927-2ee91cede3ba.avif');
-  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -39,12 +36,6 @@ html {
   padding: 0;
 }
 
-.reviews::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-}
 
 
 
@@ -88,17 +79,7 @@ nav {
   z-index: 100;
 }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: var(--text);
-}
 
-.logo span {
-  color: var(--accent);
-}
 
 nav ul {
   list-style: none;
@@ -163,16 +144,6 @@ nav ul a:hover, nav ul a.active {
 }
 
 /* CARD */
-.movie-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  animation: fadeUp 0.5s ease both;
-}
 
 .image-content a,
 a:has(.image-content) {
@@ -220,145 +191,6 @@ a:has(.image-content) {
   background-image: url('/images/good-luck-have-fun-dont-die_shqy9la3.webp'); 
 }
 
-.movie-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px var(--accent);
-  border-color: var(--accent);
-}
-
-/* POSTER */
-.poster-wrap {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16/9;
-}
-
-.poster-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.movie-card:hover .poster-wrap img {
-  transform: scale(1.05);
-}
-
-.poster-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(26,26,40,0.95) 0%, transparent 50%);
-}
-
-.genre-tag {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: var(--accent);
-  color: #0a0a0f;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 4px;
-}
-
-/* CARD BODY */
-.card-body {
-  padding: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  flex: 1;
-}
-
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.movie-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  flex: 1;
-}
-
-.rating-badge {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: var(--accent-dim);
-  border: 1px solid rgba(232,184,75,0.3);
-  border-radius: 6px;
-  padding: 4px 10px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.rating-badge .star-icon {
-  color: var(--star);
-  font-size: 0.85rem;
-}
-
-.rating-badge span {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.stars {
-  display: flex;
-  gap: 2px;
-}
-
-.stars span {
-  color: var(--star);
-  font-size: 0.8rem;
-}
-
-.stars span.empty {
-  color: var(--border);
-  filter: none;
-}
-
-.review-text {
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--muted);
-  font-weight: 300;
-}
-
-.reviewer {
-  margin-top: auto;
-  padding-top: 0.8rem;
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-
-.reviewer-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.reviewer-name {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.review-date {
-  font-size: 0.8rem;
-  color: var(--accent);
-}
 
 .wrap {
   display: flex;
@@ -643,7 +475,7 @@ a:has(.image-content) {
     }
 
     .wrap .overlay {
-        transform: none !important;
+        transform: none;
     }
 
     .wrap:hover .overlay {
