@@ -110,3 +110,27 @@
     margin: 6rem auto 4rem;
     padding: 0 2rem;
 }
+
+.ryan-gosling{
+    background-image: url('/images/ryan-gosling-gq-magazine-01.webp');
+}
+
+.samara-weaving{
+    background-image: url('/images/Samara-Weaving-032526-818d6f60d1554814b6a6407bc32fe2e6.webp');
+}
+
+.zendaya{
+    background-image: url('/images/Zendaya-1.webp');
+}
+
+.jon-hamm{
+    background-image: url('/images/People-Hasty_Pudding_79494.avif');
+}
+
+.chris-pratt{
+    background-image: url('/images/chris-pratt-arrives-at-the-world-premiere-of-netflixs-the-news-photo-1755612879.avif');
+}
+
+.neve-campbell{
+    background-image: url('/images/ENTER-MOVIE-SCREAM-7-CAMPBELL-GET.webp');
+}
